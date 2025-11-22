@@ -10,3 +10,26 @@ kubectl get svc
 docker pull jsonrivers/nagios
 docker pull jasonrivers/nagios
 docker run --name nagios3 -p 9090:80 -d jasonrivers/nagios
+
+in powershell
+sudo apt update
+sudo apt-get install docker.io
+sudo apt install git
+Sudo apt install nano
+Sudo docker ps
+in the file
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin http-link
+git push -u origin 
+again in powershell
+git clone <copied http url>
+ls
+where the file is in that folder 
+Nano Docker file
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+sudo docker build –t mywebapp .
+sudo docker run -d -p 80:80 mywebapp
+then copy ipv4 address and run in chrome
