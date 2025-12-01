@@ -18,6 +18,7 @@ sudo apt install git
 Sudo apt install nano
 Sudo docker ps
 in the file
+git init
 git add .
 git commit -m "first commit"
 git branch -M main
@@ -33,6 +34,11 @@ COPY . /usr/share/nginx/html
 sudo docker build –t mywebapp .
 sudo docker run -d -p 80:80 mywebapp
 then copy ipv4 address and run in chrome
+FROM tomcat:9-jdk19
+COPY target/*.war /usr/local/tomcat/webapps
+sudo docker build –t mavenwebproject .
+sudo docker run -d -p 9090:8080 mavenwebproject
+
 
 docker pull redis
 docker run --name my-redis -d redis
