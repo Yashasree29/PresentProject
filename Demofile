@@ -34,6 +34,21 @@ sudo docker build –t mywebapp .
 sudo docker run -d -p 80:80 mywebapp
 then copy ipv4 address and run in chrome
 
+docker pull redis
+docker run --name my-redis -d redis
+docker ps
+docker exec -it my-redis redis-cli
+127.0.0.1:6379> SET name "Alice"
+OK
+127.0.0.1:6379> GET name
+"Alice"
+127.0.0.1:6379>exit 
+docker stop my-redis
+docker start my-redis
+docker rm my-redis  // Note before removing stop the container
+docker rmi redis // remove redis image
+
+
 pipeline {
     agent any
     tools{
