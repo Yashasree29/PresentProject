@@ -6,6 +6,7 @@ kubectl minikube service nginx-deploy --url
 kubectl pods
 kubectl describe pods
 kubectl get svc
+kubectl scale deployment mynginx --replicas=4
 
 docker pull jsonrivers/nagios
 docker pull jasonrivers/nagios
